@@ -1,7 +1,7 @@
 import React from 'react';
 
 export function FetchYouTubeTrailerUrl({ item }) {
-  const apiKey = 'AIzaSyD7av-Pezo7-pOjWdReE-EjlNLKoi61R4M';
+  const apiKey = 'API KEY';
 
   React.useEffect(() => {
     async function fetchTrailerUrl() {

@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     const fetchDataForAllRows = async () => {
-      const apiKey = 'dd12abe88201974cc0c013f0cbb08455';
+      const apiKey = 'API KEY';
 
       const updatedDataRows = await Promise.all(
         dataRows.map(async (row) => {
