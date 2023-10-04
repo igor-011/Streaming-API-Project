@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+/*import React, { useEffect } from 'react';
 
 export function FetchYouTubeTrailerUrl({ item, setSelectedTrailerUrl }) {
   const apiKey = 'AIzaSyD7av-Pezo7-pOjWdReE-EjlNLKoi61R4M';
@@ -103,4 +103,4 @@ export default function TrailerComponent({ trailerUrl }) {
       ></iframe>
     </div>
   );
-}
+}*/
