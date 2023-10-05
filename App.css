@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+body{
+  background-color: #222020;
+}
+body::-webkit-scrollbar{
+  width: 4px; 
+  background-color:#032541;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar thumb color*/
+  border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Scrollbar thumb color on hover */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #032541;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.background_container {
+  background-color: #222020;
+}
+
+button {
+  margin-left: 2.8%;
+  font-size: 0rem;
+  border-radius: 0.5rem;
+  border: 1px solid #032541;
+  background-color: #555657;
+  color: white;
+  transition: 0.5s;
+  width: 0px;
+  height: 0px;
+  padding: 0;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #303233;
+}
+.imag:hover button{
+  font-size: 1.5rem;
+  width: 185px;
+  height: 32px;
+}
+img{
+  cursor: pointer;
+  max-width: 200px;
+  height: 300px;
+  object-fit: contain;
+  pointer-events: none;
+}
+.row-title {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin-left: 20px; /* Adjust the left margin as needed */
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+.Titles{
+  margin: 10px;
+  margin-top: 1rem;
+  font-size: 1.9rem;
+  margin-left: 2%;
+  color: white;
+  background-color: #222020;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  background-color: #222020;
+  width: 100%;
+  overflow-x: scroll;
+  user-select: none;
+}
+.Streaming{
+  color: white;
+  margin-left: 2.3%;
+}
+.Streamify{
+  color: rgb(18, 235, 29);
+  font-size: 32px;
+}
+.top-text{
+  font-size: 41px;
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+.head-text{
+  font-size: 19px;
+  width: 35%;
+  margin-bottom: 2.3rem;
+}
+.Subs{
+  border-radius: 6px;
+  font-size: 15px;
+  position: absolute;
+  left: 78%;
+  top: 1.7%;
+  background-color: rgb(16, 214, 26);
+  width: 170px;
+  height: 33px;
+}
+.Subs:hover{
+  background-color: rgb(19, 252, 31);
+}
+.Log-in{
+  border-radius: 6%;
+  font-size: 1.2rem;
+  position: absolute;
+  border: 1px solid white;
+  background-color: black;
+  top: 2%;
+  right: 2%;
+  width: 80px;
+  height: 30px;
+}
+.Log-in:hover{
+  background-color: white;
+  color: black;
+}
+.flex-container::-webkit-scrollbar {
+  width: 0%;
+  height: 0px;  
+}
+.flex-container::-webkit-scrollbar-thumb {
+  background-color: #888;   
+  border-radius: 4px;
+}
+.flex-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.cont:hover .text {
+  opacity: 1;
+  transform: translateY(-250%);
+  transition: 0.5s;
+}
+
+.movie_item {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.movie_item img {
+  border-radius: 3rem;
+  box-shadow: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie_name {
+  padding-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
