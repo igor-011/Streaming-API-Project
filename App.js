@@ -12,6 +12,7 @@ function App() {
     { title: 'Popular Movies', subject: 'movie', type: 'popular', data: [] },
     // Add more data rows as needed
   ]);
+  const [showButton, setShowButton] = useState(false);
 
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -43,21 +44,44 @@ function App() {
     fetchDataForAllRows();
   }, [dataRows]);
 
+
   const handleOnMouseDown = (e, index) => {
     setIsScrolling(true);
     setStartX(e.clientX);
     setScrollLeft(e.currentTarget.scrollLeft);
   };
-
   const handleOnMouseMove = (e, index) => {
     if (!isScrolling) return;
     const x = e.clientX - startX;
     e.currentTarget.scrollLeft = scrollLeft - x;
   };
-
   const handleOnMouseUp = () => {
     setIsScrolling(false);
   };
+
+
+  const handleOnTouchStart = (e, index) => {
+    setIsScrolling(true);
+    setStartX(e.touches[0].clientX);
+    setScrollLeft(e.currentTarget.scrollLeft);
+  };
+  const handleOnTouchMove = (e, index) => {
+    if (!isScrolling) return;
+    const x = e.touches[0].clientX - startX;
+    e.currentTarget.scrollLeft = scrollLeft - x;
+  };
+  const handleOnTouchEnd = () => {
+    setIsScrolling(false);
+  };
+
+  const handleButtonTouchStart = () =>{
+    setShowButton(true)
+  }
+  const handleButtonTouchEnd =() =>{
+    setTimeout(()=>{
+      setShowButton(false)
+    }, 5000)
+  }
 
   return (
     <>
@@ -79,15 +103,25 @@ function App() {
               onMouseDown={(e) => handleOnMouseDown(e, index)}
               onMouseMove={(e) => handleOnMouseMove(e, index)}
               onMouseUp={handleOnMouseUp}
+              onTouchStart={(e) => handleOnTouchStart(e, index)}
+              onTouchMove={(e) => handleOnTouchMove(e, index)}
+              onTouchEnd={handleOnTouchEnd}
+
             >
               {row.data.map((item) => (
                 <div className="movie_item" key={item.id}>
-                  <div className='imag'>
+                  <div className='imag'
+                  onTouchStart={handleButtonTouchStart}
+                  onTouchEnd={handleButtonTouchEnd} >
                     <img
                       alt=""
                       src={`https://image.tmdb.org/t/p/w300/${item.poster_path}`}
                     />
-                    <button onClick={() => setSelectedTrailerUrl(item)}>Trailer</button>
+                    
+                    <button className={`${showButton ? 'buttonTouch' : ''}`}
+                     onClick={() => setSelectedTrailerUrl(item)}
+                     onTouchEnd={() => setSelectedTrailerUrl(item)}>Trailer</button>
+                     
                   </div>
                   <div className="movie_name">
                     {item.original_title ? item.original_title : item.original_name}

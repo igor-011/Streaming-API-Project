@@ -33,6 +33,11 @@ button:hover {
   cursor: pointer;
   background-color: #303233;
 }
+.buttonTouch{
+  font-size: 1.5rem;
+  width: 185px;
+  height: 32px;
+}
 .imag:hover button{
   font-size: 1.5rem;
   width: 185px;
@@ -173,6 +178,11 @@ img{
     cursor: pointer;
     background-color: #303233;
   }
+  .buttonTouch{
+    font-size: 1rem;
+    width: 125px;
+    height: 32px;
+  }
   .imag:hover button{
     font-size: 1rem;
     width: 125px;
@@ -307,6 +317,11 @@ img{
   button:hover {
     cursor: pointer;
     background-color: #303233;
+  }
+  .buttonTouch{
+    font-size: 1.2rem;
+    width: 70px;
+    height: 25px;
   }
   .imag:hover button{
     font-size: 1.2rem;
