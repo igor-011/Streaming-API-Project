@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     const fetchDataForAllRows = async () => {
-      const apiKey = 'API KEY';
+      const apiKey = process.env.REACT_APP_MOVIE_API_KEY;
 
       const updatedDataRows = await Promise.all(
         dataRows.map(async (row) => {

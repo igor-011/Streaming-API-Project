@@ -95,10 +95,10 @@ img{
   border-radius: 6px;
   font-size: 15px;
   position: absolute;
-  left: 78%;
+  right: 9.4%;
   top: 1.7%;
   background-color: rgb(16, 214, 26);
-  width: 170px;
+  width: 162px;
   height: 33px;
 }
 .Subs:hover{
@@ -111,8 +111,8 @@ img{
   border: 1px solid white;
   background-color: black;
   top: 2%;
-  right: 2%;
-  width: 80px;
+  right: 1.8%;
+  width: 75px;
   height: 30px;
 }
 .Log-in:hover{
@@ -298,7 +298,7 @@ img{
     font-weight: bold;
   }
 }
-@media (min-width:250px) and (max-width:599px){
+@media (min-width:240px) and (max-width:599px){
   :root{
     font-size: 12px;
   }

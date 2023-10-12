@@ -1,7 +1,7 @@
 import React from 'react';
 
 export function FetchYouTubeTrailerUrl({ item }) {
-  const apiKey = 'API KEY';
+  const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
 
   React.useEffect(() => {
     async function fetchTrailerUrl() {
@@ -35,7 +35,7 @@ export function FetchYouTubeTrailerUrl({ item }) {
     }
 
     fetchTrailerUrl();
-  }, [item]);
+  }, );
 
   return null;
 }
