@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Streaming-API-Project/static/css/main.d7fe3804.css",
+    "main.js": "/Streaming-API-Project/static/js/main.c2b50126.js",
+    "static/js/787.d69daece.chunk.js": "/Streaming-API-Project/static/js/787.d69daece.chunk.js",
+    "index.html": "/Streaming-API-Project/index.html",
+    "main.d7fe3804.css.map": "/Streaming-API-Project/static/css/main.d7fe3804.css.map",
+    "main.c2b50126.js.map": "/Streaming-API-Project/static/js/main.c2b50126.js.map",
+    "787.d69daece.chunk.js.map": "/Streaming-API-Project/static/js/787.d69daece.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7fe3804.css",
+    "static/js/main.c2b50126.js"
+  ]
+}
